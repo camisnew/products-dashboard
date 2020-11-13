@@ -6,7 +6,7 @@ var app = express();
 app.use(express.json());
 
 app.get("/", (request, response) => {
-  const products = fs.readFileSync('./service/products.csv', 'utf-8');
+  const products = fs.readFileSync('./products.csv', 'utf-8');
   const productsJson = Papa.parse(products, {
       delimiter: ";",
       header: true
